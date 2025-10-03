@@ -496,3 +496,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+combos:
+- p: [31, 32]
+  k: Gui+[
+- p: [28, 27]
+  k: Gui+]
