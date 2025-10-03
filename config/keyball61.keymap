@@ -25,6 +25,20 @@
 };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        back {
+            bindings = <&kp RG(LEFT_BRACKET)>;
+            key-positions = <31 32>;
+        };
+
+        fwd {
+            bindings = <&kp RG(RIGHT_BRACKET)>;
+            key-positions = <28 27>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
