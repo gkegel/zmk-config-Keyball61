@@ -51,7 +51,7 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - $$mdi:apple-keyboard-shift$$
-  - $$mdi:alpha-w-box$$
+  - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
   - LEFT WIN
@@ -60,7 +60,7 @@ layers:
   - SYM
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:keyboard-space$$', h: SYM}
-  - {h: '1', s: '$$mdi:bluetooth-connect$$'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
   NUM:
   - {t: '$$mdi:transfer$$', type: trans}
