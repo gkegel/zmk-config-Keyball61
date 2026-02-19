@@ -63,6 +63,24 @@
             hold-trigger-on-release;
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 43 44 45 46 47 48 49 50 51 52 54 55 56 57 58 59 60 53>;
         };
+
+        LMB_dt: LMB_dt {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LMB_DT";
+            #binding-cells = <0>;
+            bindings = <&kp J>, <&mkp LCLK>;
+
+            tapping-term-ms = <200>;
+        };
+
+        RMB_dt: RMB_dt {
+            compatible = "zmk,behavior-tap-dance";
+            label = "RMB_DT";
+            #binding-cells = <0>;
+            bindings = <&kp L>, <&mkp RCLK>;
+
+            tapping-term-ms = <200>;
+        };
     };
 
     keymap {
@@ -75,17 +93,17 @@
 &kp TAB         &kp Q              &kp W            &kp E            &kp R         &kp T                                             &kp Y        &kp U         &kp I             &kp O             &kp P                  &kp BACKSLASH
 &kp ESCAPE      &hml LEFT_SHIFT A  &hml LEFT_GUI S  &hml LEFT_ALT D  &hml LCTRL F  &kp G                                             &kp H        &hmr RCTRL J  &hmr RIGHT_ALT K  &hmr RIGHT_GUI L  &hmr RIGHT_SHIFT SEMI  &kp SQT
 &kp LEFT_SHIFT  &kp Z              &kp X            &kp C            &kp V         &kp B        &kp RG(TILDE)  &kp RG(LEFT_BRACKET)  &kp N        &kp M         &kp COMMA         &kp DOT           &kp FSLH               &kp RIGHT_SHIFT
-&bt BT_SEL 0    &kp LCTRL          &kp LEFT_ALT     &kp LEFT_WIN     &mo 2         &lt 4 SPACE  &mo 2          &kp ENTER             &lt 2 SPACE                                                    &none                  &bt BT_SEL 1
+&bt BT_SEL 0    &kp LCTRL          &kp LEFT_ALT     &kp LEFT_WIN     &mo 1         &lt 2 SPACE  &mo 3          &lt 1 RETURN          &lt 2 SPACE                                                    &none                  &bt BT_SEL 1
             >;
         };
 
         number_layer {
             bindings = <
-&trans  &kp N1    &kp N2    &kp N3  &kp N4     &kp N5                  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
-&trans  &trans    &trans    &trans  &trans     &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans    &trans    &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans    &trans    &trans  &trans     &trans  &trans  &trans  &trans                          &trans  &trans
+&trans  &kp N1  &kp N2          &kp N3          &kp N4     &kp N5                  &kp N6  &kp N7          &kp N8          &kp N9           &kp N0  &trans
+&trans  &trans  &trans          &kp UP_ARROW    &trans     &trans                  &trans  &trans          &kp UP_ARROW    &trans           &trans  &trans
+&trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &trans                  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&trans  &trans  &trans          &trans          &trans     &trans  &trans  &trans  &trans  &trans          &trans          &trans           &trans  &trans
+&trans  &trans  &trans          &trans          &trans     &trans  &trans  &trans  &trans                                                   &trans  &trans
             >;
 
             label = "NUM";
@@ -94,11 +112,11 @@
         symbol_layer {
             label = "SYM";
             bindings = <
-&trans  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH      &kp DOLLAR    &kp PERCENT                  &kp CARET       &kp AMPERSAND  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
-&trans  &trans           &trans        &trans        &trans        &trans                       &trans          &trans         &trans            &trans                &trans                 &trans
-&trans  &bt BT_CLR       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans                       &kp MINUS       &kp EQUAL      &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &trans                 &trans
-&trans  &trans           &trans        &trans        &trans        &trans       &trans  &trans  &kp UNDERSCORE  &kp PLUS       &trans            &trans                &trans                 &trans
-&trans  &trans           &trans        &trans        &trans        &trans       &trans  &trans  &trans                                                                 &trans                 &trans
+&trans  &kp EXCLAMATION  &kp AT_SIGN      &kp HASH         &kp DOLLAR       &kp PERCENT                      &kp CARET       &kp AMPERSAND  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+&trans  &trans           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans                           &kp TILDE       &kp GRAVE      &kp LEFT_BRACE    &kp RIGHT_BRACE       &trans                 &trans
+&trans  &trans           &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans                           &kp MINUS       &kp EQUAL      &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &trans                 &trans
+&trans  &trans           &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_0  &trans  &trans  &kp UNDERSCORE  &kp PLUS       &trans            &trans                &trans                 &trans
+&trans  &trans           &trans           &trans           &trans           &trans           &trans  &trans  &trans                                                                 &trans                 &trans
             >;
         };
 
@@ -116,22 +134,22 @@
         mouse_layer {
             label = "MOUSE";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans     &trans   &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans     &trans   &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &mkp LCLK  &lt 5 K  &mkp RCLK  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans   &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &sl 0                                  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans   &trans   &trans   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans   &trans   &trans   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &LMB_dt  &lt 5 K  &RMB_dt  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans   &trans   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &to 0                              &trans  &trans
             >;
         };
 
         scroll_layer {
             label = "SCROLL";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans
+&trans          &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans          &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans          &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR_ALL  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans
             >;
         };
 
