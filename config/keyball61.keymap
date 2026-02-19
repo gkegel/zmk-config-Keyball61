@@ -68,7 +68,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LMB_DT";
             #binding-cells = <0>;
-            bindings = <&kp J>, <&mkp LCLK>;
+            bindings = <&kp J>, <&mkp MB1>;
 
             tapping-term-ms = <200>;
         };
@@ -77,7 +77,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "RMB_DT";
             #binding-cells = <0>;
-            bindings = <&kp L>, <&mkp RCLK>;
+            bindings = <&kp L>, <&mkp MB2>;
 
             tapping-term-ms = <200>;
         };
