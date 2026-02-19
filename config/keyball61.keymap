@@ -70,7 +70,7 @@
             #binding-cells = <0>;
             bindings = <&kp J>, <&mkp MB1>;
 
-            tapping-term-ms = <200>;
+            tapping-term-ms = <400>;
         };
 
         RMB_dt: RMB_dt {
@@ -79,7 +79,7 @@
             #binding-cells = <0>;
             bindings = <&kp L>, <&mkp MB2>;
 
-            tapping-term-ms = <200>;
+            tapping-term-ms = <400>;
         };
     };
 
