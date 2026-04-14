@@ -52,7 +52,7 @@ layers:
   - {t: /, s: '?'}
   - $$mdi:apple-keyboard-shift$$
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
-  - $$mdi:apple-keyboard-control$$
+  - '&hyper_hold'
   - $$mdi:apple-keyboard-option$$
   - LEFT WIN
   - NUM
