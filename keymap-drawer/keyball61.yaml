@@ -435,11 +435,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
-- p: [47, 48]
-  k: Gui+[
-- p: [40, 41]
+- p: [27, 28]
   k: Gui+]
-- p: [37, 38]
-  k: Z
-- p: [45, 46]
-  k: J
+- p: [31, 32]
+  k: Gui+[
