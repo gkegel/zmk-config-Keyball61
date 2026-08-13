@@ -32,29 +32,19 @@
         // NOTE: back/fwd moved off their old home-row keys — after the Neu
         // remap those positions became n+t (fwd) and a+e (back), which would
         // misfire constantly. Now on rare-bigram bottom-row pairs. Tune freely.
-        back {
-            bindings = <&kp RG(LEFT_BRACKET)>;
-            key-positions = <47 48>;   // y + k
-            timeout-ms = <80>;
-        };
 
         fwd {
             bindings = <&kp RG(RIGHT_BRACKET)>;
-            key-positions = <40 41>;   // d + g
+            key-positions = <27 28>;   // d + g
             timeout-ms = <80>;
         };
 
         // Hands Down Neu keeps z and j off the main block; place them on combos.
-        combo_z {
-            bindings = <&kp Z>;
-            key-positions = <37 38>;   // x + c
-            timeout-ms = <60>;
-        };
 
-        combo_j {
-            bindings = <&kp J>;
-            key-positions = <45 46>;   // u + o
-            timeout-ms = <60>;
+        back {
+            bindings = <&kp RG(LEFT_BRACKET)>;
+            key-positions = <31 32>;
+            timeout-ms = <80>;
         };
     };
 
@@ -127,11 +117,11 @@
         default_layer {
             label = "NEU";
             bindings = <
-&kp ESC         &kp N1             &kp N2           &kp N3           &kp N4        &kp N5                                            &kp N6       &kp N7        &kp N8            &kp N9            &kp N0                 &kp BSPC
-&kp TAB         &kp W              &kp F            &kp M            &kp P         &kp V                                             &kp FSLH     &kp DOT       &kp Q             &kp DQT           &kp SQT                &kp BACKSLASH
-&kp ESCAPE      &hml LEFT_SHIFT R  &hml LEFT_GUI S  &hml LEFT_ALT N  &hml LCTRL T  &kp B                                             &kp COMMA    &hmr RCTRL A  &hmr RIGHT_ALT E  &hmr RIGHT_GUI I  &hmr RIGHT_SHIFT H     &kp SQT
-&kp LEFT_SHIFT  &kp X              &kp C            &kp L            &kp D         &kp G        &kp RG(TILDE)  &kp RG(LEFT_BRACKET)  &kp MINUS    &kp U         &kp O             &kp Y             &kp K                  &kp RIGHT_SHIFT
-&bt BT_SEL 0    &hyper_hold        &kp LEFT_ALT     &kp LEFT_WIN     &mo 1         &lt 2 SPACE  &mo 3          &lt 1 RETURN          &lt 2 SPACE                                                    &none                  &bt BT_SEL 1
+&kp ESC         &kp N1             &kp N2           &kp N3           &kp N4        &kp N5                                            &kp N6       &kp N7        &kp N8            &kp N9            &kp N0              &kp BSPC
+&kp TAB         &kp W              &kp F            &kp M            &kp P         &kp V                                             &kp FSLH     &kp DOT       &kp Q             &kp DQT           &kp SQT             &kp BACKSLASH
+&kp ESCAPE      &hml LEFT_SHIFT R  &hml LEFT_GUI S  &hml LEFT_ALT N  &hml LCTRL T  &kp B                                             &kp COMMA    &hmr RCTRL A  &hmr RIGHT_ALT E  &hmr RIGHT_GUI I  &hmr RIGHT_SHIFT H  &kp SQT
+&kp LEFT_SHIFT  &kp X              &kp C            &kp L            &kp D         &kp G        &kp RG(TILDE)  &kp RG(LEFT_BRACKET)  &kp MINUS    &kp U         &kp O             &kp Y             &kp K               &kp RIGHT_SHIFT
+&bt BT_SEL 0    &hyper_hold        &kp LEFT_ALT     &kp LEFT_WIN     &mo 1         &lt 2 SPACE  &mo 3          &lt 1 RETURN          &lt 2 SPACE                                                    &none               &bt BT_SEL 1
             >;
         };
 
