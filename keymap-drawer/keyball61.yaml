@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: keyball61}
 layers:
-  QWRT:
+  NEU:
   - $$mdi:keyboard-esc$$
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
@@ -14,42 +14,42 @@ layers:
   - {t: '0', s: )}
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:keyboard-tab$$
-  - Q
   - W
-  - E
-  - R
-  - T
-  - Y
-  - U
-  - I
-  - O
+  - F
+  - M
   - P
+  - V
+  - {t: /, s: '?'}
+  - {t: ., s: '>'}
+  - Q
+  - '"'
+  - {t: '''', s: '"'}
   - {t: \, s: '|'}
   - $$mdi:keyboard-esc$$
-  - {t: A, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: R, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: S, h: '$$mdi:apple-keyboard-command$$'}
-  - {t: D, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: F, h: '$$mdi:apple-keyboard-control$$'}
-  - G
-  - H
-  - {t: J, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: K, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: L, h: RIGHT GUI}
-  - {t: ;, h: '$$mdi:apple-keyboard-shift$$', s: ':'}
+  - {t: N, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: T, h: '$$mdi:apple-keyboard-control$$'}
+  - B
+  - {t: ',', s: <}
+  - {t: A, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: E, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: I, h: RIGHT GUI}
+  - {t: H, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-shift$$
-  - Z
   - X
   - C
-  - V
-  - B
+  - L
+  - D
+  - G
   - Gui+~
   - {t: 'Gui+[', s: 'Gui+{'}
-  - N
-  - M
-  - {t: ',', s: <}
-  - {t: ., s: '>'}
-  - {t: /, s: '?'}
+  - {t: '-', s: _}
+  - U
+  - O
+  - Y
+  - K
   - $$mdi:apple-keyboard-shift$$
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - '&hyper_hold'
@@ -307,7 +307,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: QWRT, h: toggle}
+  - {t: NEU, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   SCROLL:
@@ -435,7 +435,11 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
-- p: [31, 32]
+- p: [47, 48]
   k: Gui+[
-- p: [28, 27]
+- p: [40, 41]
   k: Gui+]
+- p: [37, 38]
+  k: Z
+- p: [45, 46]
+  k: J
