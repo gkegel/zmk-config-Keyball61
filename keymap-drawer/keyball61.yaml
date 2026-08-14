@@ -23,8 +23,8 @@ layers:
   - {t: ., s: '>'}
   - Q
   - '"'
-  - {t: '''', s: '"'}
-  - {t: \, s: '|'}
+  - {t: ;, s: ':'}
+  - Z
   - $$mdi:keyboard-esc$$
   - {t: R, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: S, h: '$$mdi:apple-keyboard-command$$'}
@@ -36,7 +36,7 @@ layers:
   - {t: E, h: '$$mdi:apple-keyboard-option$$'}
   - {t: I, h: RIGHT GUI}
   - {t: H, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: '''', s: '"'}
+  - J
   - $$mdi:apple-keyboard-shift$$
   - X
   - C
@@ -45,7 +45,7 @@ layers:
   - G
   - Gui+~
   - {t: 'Gui+[', s: 'Gui+{'}
-  - {t: '-', s: _}
+  - {t: \, s: '|'}
   - U
   - O
   - Y
@@ -439,3 +439,7 @@ combos:
   k: Gui+]
 - p: [31, 32]
   k: Gui+[
+- p: [32, 33]
+  k: {t: '$$mdi:backspace$$', type: backspace}
+- p: [27, 26]
+  k: $$mdi:backspace-reverse-outline$$
